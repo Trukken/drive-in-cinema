@@ -25,14 +25,14 @@ class AiringController extends Controller
      * @OA\Get(
      *     path="/api/airing",
      *     tags={"airing"},
-     *     summary="Fetch a specific airing.",
+     *     summary="Fetches all available airings.",
      *     @OA\Response(response="200", description="Fetches all available airings.")
      * )
      */
     public function index(): JsonResponse
     {
-        $movies = Airing::all();
-        return response()->json($movies);
+        $airings = Airing::all();
+        return response()->json($airings);
     }
 
     /**
@@ -132,9 +132,9 @@ class AiringController extends Controller
      * )
      */
     public function update(AiringRequest $request, $id): JsonResponse {
-        $movie = Airing::find($id);
-        $movie->update($request->all());
-        return response()->json($movie);
+        $airing = Airing::find($id);
+        $airing->update($request->all());
+        return response()->json($airing);
     }
 
     /**

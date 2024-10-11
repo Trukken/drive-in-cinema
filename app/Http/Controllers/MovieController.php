@@ -20,8 +20,8 @@ class MovieController extends Controller
      * @OA\Get(
      *     path="/api/movie",
      *     tags={"movie"},
-     *     summary="Fetch a specific movie.",
-     *     @OA\Response(response="200", description="Fetches all available airings.")
+     *     summary="Fetches all available movies.",
+     *     @OA\Response(response="200", description="Fetches all available movies.")
      * )
      */
     public function index(): JsonResponse

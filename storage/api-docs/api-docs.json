@@ -10,6 +10,7 @@
                 "tags": [
                     "airing"
                 ],
+                "summary": "Fetches all available airings.",
                 "operationId": "e97d3bdd4cb6048117dfb9b9be432124",
                 "responses": {
                     "200": {
@@ -136,6 +137,7 @@
                 "tags": [
                     "airing"
                 ],
+                "summary": "Delete a specific airing.",
                 "operationId": "765be495c17863a26fd8f9b87add1559",
                 "parameters": [
                     {
@@ -155,10 +157,11 @@
                 "tags": [
                     "movie"
                 ],
+                "summary": "Fetches all available movies.",
                 "operationId": "73d27c2257d6159bd1a40589cc59c00e",
                 "responses": {
                     "200": {
-                        "description": "Fetches all available airings."
+                        "description": "Fetches all available movies."
                     }
                 }
             },
@@ -293,6 +296,7 @@
                 "tags": [
                     "movie"
                 ],
+                "summary": "Delete a specific movie.",
                 "operationId": "85362a9026a50a31c403eed5eb5bc76b",
                 "parameters": [
                     {
