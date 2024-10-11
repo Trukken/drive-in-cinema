@@ -1,0 +1,352 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Airing endpoints to try out.",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/airing": {
+            "get": {
+                "tags": [
+                    "airing"
+                ],
+                "operationId": "e97d3bdd4cb6048117dfb9b9be432124",
+                "responses": {
+                    "200": {
+                        "description": "Fetches all available airings."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "airing"
+                ],
+                "summary": "Adds a new airing.",
+                "operationId": "dd30be7429e79ae1b8939a0d35ef5b08",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "start": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                    },
+                                    "number_of_parking_spots": {
+                                        "type": "integer"
+                                    },
+                                    "movie_id": {
+                                        "description": "An existing movie's id.",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "start": "2024-10-11 20:00:00",
+                                    "number_of_parking_spots": 300,
+                                    "movie_id": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "ok"
+                    }
+                }
+            }
+        },
+        "/api/airing/{id}": {
+            "get": {
+                "tags": [
+                    "airing"
+                ],
+                "summary": "Fetches a specific available airing.",
+                "operationId": "5180875d675b8b89019c05f4f3ac00cd",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "A result object."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "airing"
+                ],
+                "summary": "Updates an airing",
+                "operationId": "89e47b93c5b41225320c004b125b2d87",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "start": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                    },
+                                    "number_of_parking_spots": {
+                                        "type": "integer"
+                                    },
+                                    "movie_id": {
+                                        "description": "An existing movie's id.",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "start": "2024-10-11 20:00:00",
+                                    "number_of_parking_spots": 300,
+                                    "movie_id": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "airing"
+                ],
+                "operationId": "765be495c17863a26fd8f9b87add1559",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Deletes a specific airing."
+                    }
+                }
+            }
+        },
+        "/api/movie": {
+            "get": {
+                "tags": [
+                    "movie"
+                ],
+                "operationId": "73d27c2257d6159bd1a40589cc59c00e",
+                "responses": {
+                    "200": {
+                        "description": "Fetches all available airings."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "movie"
+                ],
+                "summary": "Adds a new movie.",
+                "operationId": "2c657c385fd3c24a1aa167d69b57c24f",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "title": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "age_rating": {
+                                        "type": "string"
+                                    },
+                                    "language": {
+                                        "type": "string"
+                                    },
+                                    "cover_image": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "title": "Black Hawk Down",
+                                    "desciprition": "The story of 160 elite U.S. soldiers who dropped into Mogadishu in October 1993 to capture two top lieutenants of a renegade warlord, but found themselves in a desperate battle with a large force of heavily armed Somalis.",
+                                    "age_rating": "R",
+                                    "language": "en",
+                                    "cover_image": "https://m.media-amazon.com/images/M/MV5BYTM3YTQ1M2MtNDEyNC00NzRlLWFmOTgtYjBhNDg2ODNjNTU0XkEyXkFqcGc@._V1_.jpg"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "ok"
+                    }
+                }
+            }
+        },
+        "/api/movie/{id}": {
+            "get": {
+                "tags": [
+                    "movie"
+                ],
+                "summary": "Fetches a specific available movie.",
+                "operationId": "cb0bfd96abc33d91d534d3de76ee4439",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "A result object."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "movie"
+                ],
+                "summary": "Adds a new movie.",
+                "operationId": "87a5bcde288ba241d26a644a72495142",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "title": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "age_rating": {
+                                        "type": "string"
+                                    },
+                                    "language": {
+                                        "type": "string"
+                                    },
+                                    "cover_image": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "title": "Black Hawk Down",
+                                    "desciprition": "The story of 160 elite U.S. soldiers who dropped into Mogadishu in October 1993 to capture two top lieutenants of a renegade warlord, but found themselves in a desperate battle with a large force of heavily armed Somalis.",
+                                    "age_rating": "R",
+                                    "language": "en",
+                                    "cover_image": "https://m.media-amazon.com/images/M/MV5BYTM3YTQ1M2MtNDEyNC00NzRlLWFmOTgtYjBhNDg2ODNjNTU0XkEyXkFqcGc@._V1_.jpg"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "ok"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "movie"
+                ],
+                "operationId": "85362a9026a50a31c403eed5eb5bc76b",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Deletes a specific movie."
+                    }
+                }
+            }
+        },
+        "/api/movie/{id}/airings": {
+            "get": {
+                "tags": [
+                    "movie"
+                ],
+                "summary": "Fetches all available airings for a specific movie.",
+                "operationId": "d50e79d72dc9e233a274896243023ff5",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "A result object."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "airing",
+            "description": "Airing related endpoints can be tested here."
+        },
+        {
+            "name": "movie",
+            "description": "Movie related endpoints can be tested here."
+        }
+    ]
+}
