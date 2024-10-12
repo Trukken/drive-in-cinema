@@ -16,7 +16,7 @@ return new class extends Migration
             $table->dateTime('start', 0);
             $table->integer('number_of_parking_spots');
             $table->unsignedBigInteger('movie_id');
-            $table->foreign('movie_id')->references(['id'])->on('movies');
+            $table->foreign('movie_id')->references(['id'])->on('movies')->cascadeOnDelete();
             $table->timestamps();
         });
     }

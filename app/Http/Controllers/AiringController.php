@@ -99,7 +99,7 @@ class AiringController extends Controller
      * @OA\Put(
      *     path="/api/airing/{id}",
      *     tags={"airing"},
-     *     summary="Updates an airing",
+     *     summary="Updates a specific airing",
      *     @OA\Parameter(
      *         in="path",
      *         name="id",

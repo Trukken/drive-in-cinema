@@ -101,7 +101,7 @@ class MovieController extends Controller
      * @OA\Put(
      *     path="/api/movie/{id}",
      *     tags={"movie"},
-     *     summary="Adds a new movie.",
+     *     summary="Updates a specific movie.",
      *     @OA\Parameter(
      *         in="path",
      *         name="id",
