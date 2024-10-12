@@ -74,17 +74,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "schema": {},
-                                "examples": {
-                                    "result": {
-                                        "summary": "A result object."
-                                    }
-                                }
-                            }
-                        }
+                        "description": "OK"
                     }
                 }
             },
@@ -92,7 +82,7 @@
                 "tags": [
                     "airing"
                 ],
-                "summary": "Updates an airing",
+                "summary": "Updates a specific airing",
                 "operationId": "89e47b93c5b41225320c004b125b2d87",
                 "parameters": [
                     {
@@ -227,17 +217,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "schema": {},
-                                "examples": {
-                                    "result": {
-                                        "summary": "A result object."
-                                    }
-                                }
-                            }
-                        }
+                        "description": "OK"
                     }
                 }
             },
@@ -245,7 +225,7 @@
                 "tags": [
                     "movie"
                 ],
-                "summary": "Adds a new movie.",
+                "summary": "Updates a specific movie.",
                 "operationId": "87a5bcde288ba241d26a644a72495142",
                 "parameters": [
                     {
@@ -327,17 +307,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "schema": {},
-                                "examples": {
-                                    "result": {
-                                        "summary": "A result object."
-                                    }
-                                }
-                            }
-                        }
+                        "description": "OK"
                     }
                 }
             }

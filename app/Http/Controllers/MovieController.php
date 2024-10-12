@@ -88,9 +88,6 @@ class MovieController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="OK",
-     *         @OA\JsonContent(
-     *             @OA\Examples(example="result", summary="A result object."),
-     *         )
      *     )
      * )
      */
@@ -175,9 +172,6 @@ class MovieController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="OK",
-     *         @OA\JsonContent(
-     *             @OA\Examples(example="result", summary="A result object."),
-     *         )
      *     )
      * )
      */
