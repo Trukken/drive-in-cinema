@@ -1,7 +1,7 @@
 # Drive-in Cinema Laravel application
 
 The application uses Laravel's built-in Docker tool, Sail.
-Frontend is yet to come, until then you can consume the APIs with Postman or you can learn more about them under `/api/documentation`.
+Frontend SPA can be viewed [here](https://github.com/Trukken/drive-in-cinema-frontend), you can also view the APIs with Postman or you can learn more about them under `/api/documentation`.
 
 ## Prerequisites:
 
@@ -22,8 +22,15 @@ Frontend is yet to come, until then you can consume the APIs with Postman or you
 
 ## Usage:
 
-The best way to discover the application is to visit `localhost/api/documentation` 
+The best way to discover the application is to use the [Fronted SPA](https://github.com/Trukken/drive-in-cinema-frontend). 
+However you can also visit `localhost/api/documentation` once you have the application running,
 where you will be able to see all available endpoints.
+
+## Libraries used:
+
+- [Laravel](https://packagist.org/packages/laravel/laravel)
+- [Laravel Sail](https://packagist.org/packages/laravel/sail)
+- [L5-Swagger](https://github.com/DarkaOnLine/L5-Swagger)
 
 ### License
 
